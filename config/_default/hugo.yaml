@@ -16,3 +16,7 @@ languages:
     languageCode: de-DE
     languageName: Deutsch
     weight: 2
+
+caches:
+  images:
+    dir: :cacheDir/images
