@@ -5,4 +5,4 @@ title: 'About'
 cascade:
     type: blog
 ---
-About page
+Über Seite

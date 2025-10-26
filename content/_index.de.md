@@ -4,4 +4,4 @@ draft: false
 title: ''
 ---
 
-Main page index
+Startseite index

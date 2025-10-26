@@ -1,7 +1,6 @@
 title: Woulve's Blog
 
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: true
 
 module:
   imports:
