@@ -1,0 +1,15 @@
+baseURL: https://example.org/
+title: Woulve's Blog
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+  de:
+    languageName: Deutsch
+    weight: 2

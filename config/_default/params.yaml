@@ -1,0 +1,7 @@
+navbar:
+  displayTitle: true
+  displayLogo: true
+  logo:
+    path: images/woulve.webp
+    width: 50
+    height: 20
