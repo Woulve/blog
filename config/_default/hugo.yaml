@@ -1,15 +1,18 @@
-baseURL: https://example.org/
 title: Woulve's Blog
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
 
 module:
   imports:
     - path: github.com/imfing/hextra
 
-defaultContentLanguage: en
 languages:
   en:
+    languageCode: en-US
     languageName: English
     weight: 1
   de:
+    languageCode: de-DE
     languageName: Deutsch
     weight: 2
