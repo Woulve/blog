@@ -1,6 +1,6 @@
 ---
-date: '2025-10-26T16:00:58+01:00'
+title: Blog
 draft: false
-title: 'Blog'
 ---
-Blog index
+
+My Blog index in english

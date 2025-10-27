@@ -5,3 +5,6 @@ navbar:
     path: images/woulve.webp
     width: 50
     height: 20
+blog:
+  list:
+    displayTags: true
