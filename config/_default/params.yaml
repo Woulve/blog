@@ -8,3 +8,5 @@ navbar:
 blog:
   list:
     displayTags: true
+footer:
+  displayPoweredBy: false
