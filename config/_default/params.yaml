@@ -10,3 +10,5 @@ blog:
     displayTags: true
 footer:
   displayPoweredBy: false
+page:
+  width: wide

@@ -1,0 +1,108 @@
+{{/*
+Shortcode for circular hero image with text content
+Usage: {{< circular-hero image="/images/hero.jpg" name="Your Name" subtitle="Your subtitle text" >}}
+*/}}
+
+{{ $image := .Get "image" }}
+{{ $name := .Get "name"}}
+{{ $subtitle := .Get "subtitle" }}
+{{ $imageSize := .Get "imageSize" | default "200" }}
+
+<style>
+.circular-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .circular-hero-container {
+    flex-direction: row;
+  }
+}
+
+.circular-hero-text {
+  flex: 1;
+  text-align: center;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .circular-hero-text {
+    text-align: left;
+  }
+}
+
+.circular-hero-text > * + * {
+  margin-top: 1.5rem;
+}
+
+.circular-hero-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  padding: 0.5rem 0;
+  background: linear-gradient(to right, #3c58b6, #a528b1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .circular-hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Dark mode using theme's dark class */
+.dark .circular-hero-title {
+  background: linear-gradient(to right, #f9fafb, #9ca3af);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.circular-hero-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.625;
+  max-width: 42rem;
+}
+
+/* Dark mode using theme's dark class */
+.dark .circular-hero-subtitle {
+  color: #d1d5db;
+}
+
+.circular-hero-image {
+  flex-shrink: 0;
+  order: 2;
+}
+</style>
+
+<div class="circular-hero-container">
+  <!-- Text Content -->
+  <div class="circular-hero-text">
+    <h1 class="not-prose circular-hero-title">
+      {{ $name }}
+    </h1>
+    
+    <div class="circular-hero-subtitle">
+      {{ $subtitle | markdownify }}
+    </div>
+  </div>
+  
+  <!-- Circular Image -->
+  <div class="circular-hero-image">
+    <div style="width: {{ $imageSize }}px; height: {{ $imageSize }}px; margin: 0 auto;">
+      <img 
+        src="{{ $image }}" 
+        alt="{{ $name }}'s Profile Photo"
+        style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 1px solid #e5e7eb; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"
+      />
+    </div>
+  </div>
+</div>
